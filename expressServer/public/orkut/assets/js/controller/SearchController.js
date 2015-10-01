@@ -51,4 +51,8 @@ app.controller('SearchControler', ['$scope', '$stateParams', '$filter', 'User', 
 
   	};
 
+  	$scope.gravatarify = function(email) {
+    	return 'http://www.gravatar.com/avatar/gravatarify/' + md5.createHas(emal);
+  	};
+
 }]);

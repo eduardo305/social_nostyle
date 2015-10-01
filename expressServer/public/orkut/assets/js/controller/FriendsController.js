@@ -1,6 +1,10 @@
 var app = app || app.module('orkut', []);
 
-app.controller('FriendsController', ['$scope', 'Friendship', function($scope, Friendship) {
+app.controller('FriendsController', ['$scope', 'Friendship', 'User', function($scope, Friendship, User) {
+
+	User.me({}, function(data) {
+  		$scope.me = data;
+  	});
 
 	Friendship.me({}, function(data) {
 		$scope.friends = data;
